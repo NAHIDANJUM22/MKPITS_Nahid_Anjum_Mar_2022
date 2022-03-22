@@ -1,0 +1,20 @@
+str="hello world"
+print(str[7])
+print(len(str))
+print("he"in str)
+print("he"not in str)
+print(str[2:7])
+print(str[5:])
+print(str[:5])
+print(str.upper())
+txt="hello welcome to python class"
+x=txt.rfind("t")
+print(x)
+txt=("helloo")
+x=txt.center(20)
+print(x)
+txt=("helloo")
+x=txt.center(20,'*')
+print(x)
+txt=" hello " * 3
+print(txt)
