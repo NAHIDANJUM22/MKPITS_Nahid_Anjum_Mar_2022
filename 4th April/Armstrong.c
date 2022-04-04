@@ -5,8 +5,9 @@ main()
 {
 	int num,n,n1,n2,n3,arm;
 	
-	printf("enter 3 digit no\n");
-	scanf("%d",& num);
+	printf("enter 3 digit no \n");
+	scanf("%d",&num);
+	
 	
 	n1=num%10;
 	n=num/10;
@@ -21,11 +22,11 @@ main()
 	
 	if(num==arm)
 	{
-		printf("%d number is armstrong");
+		printf("%d number is armstrong",num);
 	}
 	
 	else
 	{
-		printf("%d number is not armstrong");
+		printf("%d number is not armstrong",num);
 	}
 }
