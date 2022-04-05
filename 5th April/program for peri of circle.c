@@ -4,13 +4,11 @@
 main()
 {
 
-int r;
-float pi,peri;
+int r=6;
+float pi=3.14,peri;
 
-printf("enter the radius \n");
-scanf("%d",&r);
 
-peri=2*3.14*r;
+peri=2*pi*r;
 
 printf("the perimeter of circle=%f",peri);
 

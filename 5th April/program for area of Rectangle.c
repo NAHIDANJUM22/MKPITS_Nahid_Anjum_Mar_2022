@@ -4,10 +4,7 @@
 main()
 {
 
-int a,b,area;
-
-printf("enter the value \n");
-scanf("%d%d",&a,&b);
+int a=7,b=5,area;
 
 area=a*b;
 
