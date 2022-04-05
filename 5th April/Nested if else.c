@@ -12,6 +12,7 @@ main()
 	{
 		printf("p1 is greater",p1);
 	}
+	else
 	
 	if(p2>p1 && p2>p3)
 	{
