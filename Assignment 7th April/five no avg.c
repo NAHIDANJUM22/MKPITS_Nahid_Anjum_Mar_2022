@@ -2,31 +2,67 @@
 #include<conio.h>
 main()
 {
-	float y[5],avg,total=0;
-	int x,a=0;
-	printf("enter 1st no\n");
-	scanf("%f",&y[0]);
-	printf("enter 2nd no\n");
-	scanf("%f",&y[1]);
-	printf("enter 3rd no\n");
-	scanf("%f",&y[2]);
-	printf("enter 4th no\n");
-	scanf("%f",&y[3]);
-	printf("enter 5th no\n");
-	scanf("%f",&y[4]);
-	
-	for(x=0;x<5;x++)
-	{
-		if(x>0)
-		{
-		  a++;
-		  total=x;
-		}
+  int a1,a2,a3,a4,a5,pos=0,neg=0,total,avg;
+  printf("input 1st no");
+  scanf("%d",&a1);
+  printf("input 2nd no");
+  scanf("%d",&a2);
+  printf("input 3rd no");
+  scanf("%d",&a3);
+  printf("input 4th no");
+  scanf("%d",&a4);
+  printf("input 5th no");
+  scanf("%d",&a5);	
 		
-    }  
-
-    avg=total/a;
-    printf("no of positive no %d\n",a);
-    printf("the average of no %f",avg);
+	if(a1>0)
+	{
+		pos=pos+1;
+		total+=a1;
+	}
+	else
+	{
+		neg=neg+1;
+	}
+		if(a2>0)
+	{
+		pos=pos+1;
+		total+=a2;
+	}
+	else
+	{
+		neg=neg+1;
+	}
+		if(a3>0)
+	{
+		pos=pos+1;
+		total+=a3;
+	}
+	else
+	{
+		neg=neg+1;
+	}
+		if(a4>0)
+	{
+		pos=pos+1;
+		total+=a4;
+	}
+	else
+	{
+		neg=neg+1;
+	}
+		if(a5>0)
+	{
+		pos=pos+1;
+		total+=a5;
+	}
+	else
+	{
+		neg=neg+1;
+	}
+		
+	avg=total/pos;
+	
+    printf(" positive no are %d\n",pos);
+    printf(" average of positive no are %d",avg);
 	
 }
