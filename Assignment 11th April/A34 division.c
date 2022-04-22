@@ -7,7 +7,7 @@ main()
 	printf("enter 2 no x and y\n");
 	scanf("%d%d",&x,&y);
 	
-	if(y!=0)
+	if(x>y)
 	{
 		res=x/y;
 		printf("res=%f",res);
