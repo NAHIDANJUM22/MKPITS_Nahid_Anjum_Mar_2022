@@ -1,12 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
-void fun()
+void fun(int a,int b)
 {
-	int num1,num2;
-	printf("enter two nos");
-	scanf("%d%d",&num1,&num2);
-	
-	if(num1>=20&&num1<=50 || num2>=20&&num2<=50 )
+	if(a>=20&&a<=50 || b>=20&&b<=50 )
 	{
 		printf("true");
 	}
@@ -17,5 +13,8 @@ void fun()
 }
 void main()
 {
-	fun();
+	int num1,num2;
+	printf("enter two nos");
+	scanf("%d%d",&num1,&num2);
+	fun(num1,num2);
 }
