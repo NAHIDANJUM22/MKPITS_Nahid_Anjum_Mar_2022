@@ -29,7 +29,7 @@ main()
 	{
 		for(k=0;k<=2;k++)
 	{
-		sum=sum+(a[i][j]*b[k][j]);
+		sum=sum+(a[i][k]*b[k][j]);
 	}	
         c[i][j]=sum;
         sum=0;
