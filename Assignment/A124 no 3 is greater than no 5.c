@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int i,a[5],p=0,q=0;     
+    printf("enter the array element\n");
+	for(i=0;i<5;i++)
+	{
+	  scanf("%d",&a[i]);
+	}
+	for(i=0;i<5;i++)
+	{
+	if(a[i]==3) 
+	   {
+	    p=p+1;
+	   }
+   else
+     if(a[i]==5) 
+	   {
+	    q=q+1;
+	   }
+    }
+    if(p>q)
+	{
+		printf("true");
+	}
+	else
+	{
+		printf("false");
+	}
+}
