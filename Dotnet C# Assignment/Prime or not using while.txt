@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prime_or_not__using_while
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int  n;
+            Console.WriteLine("Enter a no");
+            n=Convert.ToInt32(Console.ReadLine());
+            int i = 2;
+            while(i < n)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine("not prime");
+                    break;
+
+                }
+                i++;  
+            }
+            if (i == n)
+                Console.WriteLine("prime no");
+            Console.ReadLine();
+        }
+    }
+}
