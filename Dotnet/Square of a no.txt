@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace square
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("Enter number");
+            num = Convert.ToInt32(Console.ReadLine()); //toint32 method will convertstring into integer
+            int square = num * num;
+            Console.WriteLine("square = " + square);
+            Console.ReadLine();
+        }
+    }
+}
