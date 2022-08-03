@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Accept_a_no_and_print_table_using_while
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i=1,num;
+            int res = 1;
+            Console.WriteLine("enter no");
+            num=Convert .ToInt32(Console.ReadLine());
+            while( i <=10)
+            {
+                res = num * i;
+                i++;
+                Console.WriteLine(res);
+            }
+            
+            Console.ReadLine();
+        }
+    }
+}
