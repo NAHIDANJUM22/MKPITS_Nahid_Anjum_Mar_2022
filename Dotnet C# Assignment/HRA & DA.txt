@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculate_HRA_and_DA_of_employee
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float bs,hra,da,total;
+            string empname;
+            int empno;
+       
+            Console.WriteLine("enter emp no");
+            empno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter emp name");
+            empname = Console.ReadLine();
+            Console.WriteLine("enter basic salary");
+            bs = Convert.ToSingle(Console.ReadLine());
+            hra = bs * 32 / 100;
+            da = bs * 45 / 100;
+            total = bs + hra + da;
+            Console.WriteLine("HRA=" + hra);
+            Console.WriteLine("DA=" + da);
+            Console.WriteLine("Total=" + total);
+            Console.ReadLine();
+
+
+        }
+    }
+}
