@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace uint_datatype
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            uint b;
+            Console.WriteLine("Enter uint no");
+            b = Convert.ToUInt32(Console.ReadLine());
+            Console.WriteLine("entered uint no="+ b);
+            Console.ReadLine();
+        }
+    }
+}
