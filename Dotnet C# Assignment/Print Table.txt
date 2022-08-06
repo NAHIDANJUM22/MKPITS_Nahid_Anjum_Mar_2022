@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Accept_a_no_and_print_table
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,mul;
+            Console.WriteLine("Enter a no");
+            a=Convert.ToInt32(Console.ReadLine());
+
+            mul = a * 1;
+            Console.WriteLine(mul);
+            mul = a * 2;
+            Console.WriteLine(mul);
+            mul = a * 3;
+            Console.WriteLine(mul);
+            mul = a * 4;
+            Console.WriteLine(mul);
+            mul = a * 5;
+            Console.WriteLine(mul);
+            mul = a * 6;
+            Console.WriteLine(mul);
+            mul = a * 7;
+            Console.WriteLine(mul);
+            mul = a * 8;
+            Console.WriteLine(mul);
+            mul = a * 9;
+            Console.WriteLine(mul);
+            mul = a * 10;
+            Console.WriteLine(mul);
+
+            Console.ReadLine();
+
+        }
+    }
+}
