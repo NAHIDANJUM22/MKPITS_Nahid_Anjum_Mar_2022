@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pass_the_Data_to_class_Method_from_User
+{
+    class Employee
+    {
+         int empno;
+         string name;
+        float salary;
+
+        public void getdata(int e1,string en,float sa)
+        {
+            empno = e1; 
+            name = en;
+            salary = sa;
+        }
+
+        public void displaydata()
+        {
+            Console.WriteLine("empno="+empno);
+            Console.WriteLine("empname="+name);
+            Console.WriteLine("empsalary="+salary);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating an object(instance) of employee class
+            //syntax classname objectname =new classname();
+
+            Employee emp = new Employee();
+            Console.WriteLine("enter employee no");
+            int eno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter employee name");
+            string en =(Console.ReadLine());
+            Console.WriteLine("enter employee salary");
+            float sa = Convert.ToSingle(Console.ReadLine());
+            emp.getdata(eno,en,sa);
+            emp.displaydata();
+            Console.ReadLine();
+        }
+    }
+}
