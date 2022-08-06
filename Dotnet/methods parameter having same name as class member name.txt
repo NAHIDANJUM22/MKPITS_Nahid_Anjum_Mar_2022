@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Method_parameters_having_same_name_as_Class_Members_Name
+{
+    class Employee
+    {
+        int eno;
+        string name;
+        float sal;
+
+        public void getdata(int eno,string name,float sal)
+        {
+          this.eno = eno;
+          this.name = name;
+          this.sal = sal;
+        }
+        public void showdata()
+        {
+            Console.WriteLine("empno="+eno);
+            Console.WriteLine("empname=" + name);
+            Console.WriteLine("empsal=" + sal);
+        }
+        
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating an object(instance) of employee class
+            //syntax classname objectname =new classname();
+            Employee emp = new Employee();
+            Console.WriteLine("enter employee no");
+            int en=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter employee name");
+            string na=Console.ReadLine();
+            Console.WriteLine("Enter employee Salary");
+            float sa=Convert.ToSingle(Console.ReadLine());
+            emp.getdata(en,na,sa);
+            emp.showdata();
+            Console.ReadLine();
+
+        }
+    }
+}
