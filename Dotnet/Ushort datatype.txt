@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ushort_datatype
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ushort c;
+            Console.WriteLine("Enter ushort no");
+            c = Convert.ToUInt16(Console.ReadLine());
+            Console.WriteLine("ushort Entered =" + c);
+            Console.ReadLine();
+        }
+    }
+}
