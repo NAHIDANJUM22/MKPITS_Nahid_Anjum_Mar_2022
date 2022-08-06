@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Short_datatype
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            short a;
+            Console.WriteLine("Enter short number");
+            a = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("short entered =" + a);
+            Console.ReadLine();
+        }
+    }
+}
