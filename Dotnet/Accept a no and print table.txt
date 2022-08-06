@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Accept_a_no_and_print_Tabel
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            int res=1;
+            Console.WriteLine("enter a no");
+            num=Convert.ToInt32(Console.ReadLine());
+            for(int i=1;i<=10;i++)
+            {
+                res = num * i;
+                Console.WriteLine("{0}*{1}={2}",num,i,res);
+            }
+            Console.ReadLine();
+        }
+    }
+}
