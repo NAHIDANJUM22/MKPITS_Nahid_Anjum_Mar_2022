@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace long_datatype
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            long c;
+            Console.WriteLine("enter long no");
+            c=Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enterd long no=" +c);
+            Console.ReadLine();
+        }
+    }
+}
