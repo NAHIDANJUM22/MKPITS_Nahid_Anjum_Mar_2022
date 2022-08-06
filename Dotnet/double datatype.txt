@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace double_datatype
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double m;
+            Console.WriteLine("Enter double number");
+            m=Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("double enterd = " + m);
+            Console.ReadLine();
+        }
+    }
+}
