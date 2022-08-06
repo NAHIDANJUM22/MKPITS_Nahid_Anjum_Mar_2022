@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Accept_Name_from_User
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            String name;
+            Console.WriteLine("Enter Your Name");
+            name = Console.ReadLine();
+            Console.WriteLine("Enterd Name =" + name);
+            Console.ReadLine();
+        }
+    }
+}
