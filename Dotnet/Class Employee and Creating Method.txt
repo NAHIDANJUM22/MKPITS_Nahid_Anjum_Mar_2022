@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_a_class_having_fields_and_method_getdata_and_showdata
+{
+    //create  a class employee having fields empno,empname and salary
+    class Employee
+    {
+        int empno;
+        string empname;
+        float empsalary;
+    
+    //creating methods
+    public void getdata()
+    {
+        Console.WriteLine("enter employee no");
+        empno = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter employee name");
+        empname = (Console.ReadLine());
+        Console.WriteLine("enter employee salary");
+        empsalary = Convert.ToSingle(Console.ReadLine());
+    }
+    public void displaydata()
+    {
+        Console.WriteLine("empno=" + empno);
+        Console.WriteLine("empname=" + empname);
+        Console.WriteLine("empsalary=" + empsalary);
+    }
+}
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating an object(instance) of employee class
+            //syntax classname objectname =new classname();
+            Employee emp = new Employee();
+            emp.getdata();
+            emp.displaydata();
+            Console.ReadLine();
+
+
+        }
+    }
+}
