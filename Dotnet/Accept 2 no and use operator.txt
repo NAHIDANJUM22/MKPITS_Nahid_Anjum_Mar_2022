@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace accept_2_no_and_operator
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n1, n2;
+            char op;
+            int res=0;
+            Console.WriteLine("enter no 1");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter no 2");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter operator like + - *");
+            op= Convert.ToChar(Console.ReadLine());
+            if (op == '+')
+                res = n1 + n2;
+            else if (op == '-')
+                res = n1 - n2;
+            else if (op == '*')
+                res = n1 * n2;
+            else
+                Console.WriteLine("invalid operator");
+            Console.WriteLine("result =" + res);
+            Console.ReadLine();
+
+        }
+    }
+}
