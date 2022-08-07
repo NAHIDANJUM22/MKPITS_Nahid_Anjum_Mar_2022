@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>Area of Rectangle:</p>
+    <script>
+        function dis(l,b)
+        {
+            s=area(l,b);
+           
+            document.write("area = "+s);
+
+        }
+        function area(l,b)
+        {
+            var res=l*b;
+            return res;
+        }
+    </script>
+</head>
+<body>
+    <form name="f">
+    Enter length: <input type="text" name="t1"> <br><br>
+    Enter breadth: <input type="text" name="t2"> <br><br>
+    <input type="button" value="click" onclick=" dis(document.f.t1.value,document.f.t2.value)"><br><br>
+</form>
+</body>
+</html>
