@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align:center;">
+   
+        <div id="test">
+            The following element contains some
+            <codes>code</codes> and
+            <italic>some text</italic>.
+        </div>
+        <p></p>
+        <button onClick="innerHTMLFn()">
+            innerHTML
+        </button>
+        <button onClick="innerTextFn()">
+            innerText
+        </button>
+        <p id="op"></p>
+     
+        <script>
+            function innerTextFn() {
+                var x = document.getElementById('test');
+                alert(x.innerText);
+            }
+     
+            function innerHTMLFn() {
+                var x = document.getElementById('test');
+                alert(x.innerHTML);
+            }
+    </script>
+</body>
+</html>
