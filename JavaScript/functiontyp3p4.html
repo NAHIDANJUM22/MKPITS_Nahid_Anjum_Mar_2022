@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO argument and With Return</title>
+    <P>Volume of Cube:</P>
+    <script>
+        function dis(a)
+        {
+            s=volume(a);
+            document.write("volume = "+s);
+        }
+        function volume(a)
+        {
+            var res=parseInt(6*a*a);
+            return res;
+        }
+    </script>
+     </head>
+     <body>
+         <form name="f">
+         Enter Value: <input type="text" name="t1"> <br><br>
+       
+         <button onclick="dis(document.f.t1.value);">Print</button> <br><br>
+       
+     </form>
+     </body>
+     </html>
