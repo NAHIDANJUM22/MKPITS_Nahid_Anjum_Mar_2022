@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display()
+        {
+            var user,pass,gnd,mob,city;
+            user=document.getElementById("un").value;
+            pass=document.getElementById("pw").value;
+            gnd=document.N.G.value;
+            numb=document.N.number.value;
+            city=document.N.city.value;
+
+            result="User Details"+"<br>";
+            result+="Username:  "+user+"<br>";
+            result+="Password:  "+pass+"<br>";
+            result+="Gender:  "+gnd+"<br>";
+            result+="Mobile no.:  "+mob+"<br>";
+            result+="City:  "+city+"<br>";
+
+            document.getElementById("res").innerHTML=result;
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <h3>Mkpits Solution</h3><br><br>
+</center>
+   <form name="N">
+    <fieldset>
+        <legend>Sign up form</legend><br>
+        Enter the username: <input type="text" id="un"/> &nbsp;
+        Enter the password: <input type="password" id="pw"/> &nbsp;<br><br>
+        Gender: <input type="radio" name="G" value="male" />Male
+                <input type="radio" name="G" value="female" />Female &nbsp;&nbsp;
+        Enter Mobile no: <input type="text" id="number"/> <br><br>
+        City <select name="city" id="city">
+        <option>Select</option>
+        <option value="nagpur">Nagpur</option>
+        <option value="pune">Pune</option>
+        <option value="mumbai">Mumbai</option>
+    </select><br><br>
+    <center>
+        <input type="button" value="Sign Up" onclick="display();">
+    </center>
+    <center>
+        <span align="left" id="res"></span>
+    </center>
+    </fieldset>
+   </form>
+</body>
+</html>
