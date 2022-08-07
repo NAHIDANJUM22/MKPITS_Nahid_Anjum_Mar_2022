@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>Area of Rectangle:</p>
+    <script>
+        function display(l,b)
+        {
+            var res=l*b;
+            var r1=document.getElementById("g1");
+            r1.innerText=res;
+        }
+    </script>
+</head>
+<body>
+    <form name="f1">
+        Enter length:<input type="text" name="t1"/><br><br>
+        Enter Breadth:<input type="text" name="t2"/><br><br>
+        <input type="button" value="click" onclick=" display(document.f1.t1.value,document.f1.t2.value)"><br><br>
+        result:<span id="g1"></span><br><br>
+    </form>
+    
+</body>
+</html>
