@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add</title>
+    <script>
+        function dis(n1,n2)
+        {
+            s=sum(n1,n2);
+           
+            document.write("Addition = "+s);
+
+        }
+        function sum(n1,n2)
+        {
+            var res=parseInt(n1)+parseInt(n2);
+            return res;
+        }
+    </script>
+</head>
+<body>
+    <form name="f">
+    Enter First number: <input type="text" name="t1"> <br><br>
+    Enter Second number: <input type="text" name="t2"> <br><br>
+    <button onclick="dis(document.f.t1.value,document.f.t2.value);">Print</button> <br><br>
+  
+</form>
+</body>
+</html>
