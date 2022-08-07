@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        function function1()
+        {
+        var u=document.getElementById("t1").value; 
+           var p=document.getElementById("t2").value;
+    alert(u);
+    alert(p);	   
+           if(u == "admin" && p=="admin" )
+           {
+           document.getElementById("s1").innerText="login successfull";
+           }
+           else
+           {
+            document.getElementById("s1").innerHTML="invalid credentials, try again!";
+           }
+    
+    }	
+        </script> 
+    
+    <form>
+    enter username <input type=text name="t1" id="t1" />
+    <br><br>
+    enter password <input type=password name="t2" id="t2" />
+    <br><br>
+    
+    <input type=button value=ok onclick="function1();" />
+    <span id="s1" > </span>
+    </form>	
+    
+</body>
+</html>
