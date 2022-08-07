@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function display()
+        {
+            var num=parseInt(document.getElementById("n1").value);
+           
+            switch(num)
+            {
+                case 1:
+                res="Monday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 2:
+                res="Tuesday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 3:
+                res="Wednesday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 4:
+                res="Thursday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 5:
+                res="Friday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 6:
+                res="Saturday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                case 7:
+                res="Sunday";
+                document.getElementById("res").innerText=res;
+                break;
+
+                default:
+                res="Invalid number";
+                document.getElementById("res").innerText=res;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Print day with Number</h1>
+    Enter Number:&nbsp; <input type="text" id="n1" /><br><br>
+    <input type="button" value="Print" onclick="display();" /><br><br>
+    Result:&nbsp;<span id="res"></span>
+</body>
+</html>
