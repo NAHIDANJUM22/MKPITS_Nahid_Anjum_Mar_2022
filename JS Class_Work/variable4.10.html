@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+        var num1,num2,result;
+        num1=parseInt(document.f1.n1.value);//parseInt function is used to convert string into integer
+        num2=parseInt(document.f1.n2.value);
+        result=num1+num2;
+        document.getElementById("result").innerHTML=result;
+        alert("square = " + sq);
+        
+        }
+        </script>
+        
+</head>
+<body>
+    <h1 align=center >mkpits solution</h1>
+<hr>
+<center>
+<form name="f1" style="width:50%" >
+<fieldset>
+<legend>calculation </legend>
+enter number1 <input type=text name="n1" />
+<br><br>
+enter number2 <input type=text name="n2" />
+<br><br>
+	<input type=button value="addition" onclick="msg();" />
+	<br><br>
+	result  : <span id="result" name="result" ></span>
+</fieldset>
+</form>
+</center>
+
+</body>
+</html>
