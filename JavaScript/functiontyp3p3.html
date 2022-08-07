@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO argument and With Return</title>
+    <P>Volume of Hemisphere:</P>
+    <script>
+        function dis(r)
+        {
+            s=volume(r);
+            document.write("volume = "+s);
+        }
+        function volume(r)
+        {
+            var res=parseFloat(0.67*3.142*r*r*r);
+            return res;
+        }
+    </script>
+    </head>
+    <body>
+        <form name="f">
+        Enter Value: <input type="text" name="t1"> <br><br>
+      
+        <button onclick="dis(document.f.t1.value);">Print</button> <br><br>
+      
+    </form>
+    </body>
+    </html>
