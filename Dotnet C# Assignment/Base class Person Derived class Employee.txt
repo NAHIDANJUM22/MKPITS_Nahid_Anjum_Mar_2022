@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_a_base_class_person_and_derived_class_employee
+{
+    public class Person
+    {
+        public string name;
+        public string addr;
+    }
+    public class Employee : Person
+    {
+        public int empno;
+        public int salary;
+        public string desig;
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee e = new Employee();
+            e.name = ("ayesha");
+            e.addr = ("nagpur");
+            e.empno = 456;
+            e.salary = 48000;
+            e.desig = "manager";
+            Console.WriteLine("name=" + e.name);
+            Console.WriteLine("address=" + e.addr);
+            Console.WriteLine("employee no=" + e.empno);
+            Console.WriteLine("salary=" + e.salary);
+            Console.WriteLine("designation=" + e.desig);
+        }
+    }
+}
