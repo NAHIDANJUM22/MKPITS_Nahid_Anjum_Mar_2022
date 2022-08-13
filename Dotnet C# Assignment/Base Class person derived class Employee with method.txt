@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_Class_Person_and_derived_class_Employee_with_method
+{
+    public class Person
+    {
+        string name;
+        string addr;
+        
+        public void getPersondata(string name,string addr)
+        {
+            this.name = name;
+            this.addr = addr;
+        }
+        public void displayPersondata()
+        {
+            Console.WriteLine("name="+name);
+            Console.WriteLine("address=" +addr);
+        }
+        
+    }
+    public class Employee:Person
+    {
+        int eno;
+        int sal;
+
+        public void getEmployeedata(int eno,int sal)
+        {
+            this.eno = eno;
+            this.sal= sal;
+        }
+        public void displayEmployeedata()
+        {
+            Console.WriteLine("empno="+eno);
+            Console.WriteLine("empsal=" + sal);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee e= new Employee();
+            e.getPersondata("veena", "nagpur");
+            e.getEmployeedata(5, 50000);
+            e.displayPersondata();
+            e.displayEmployeedata();
+        }
+    }
+}
