@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class_Person_Derived_class_Student
+{
+    public class Person
+    {
+        string name;
+        string addr;
+
+        protected internal void getPersondata(string name,string addr)
+        {
+            this.name = name;
+            this.addr = addr;
+        }
+        protected internal void displayPersondata()
+        {
+            Console.WriteLine("name="+name);
+            Console.WriteLine("address="+addr);
+        }
+    }
+    public class Student : Person
+    {
+        int rno;
+        int marks;
+        public void getStudentdata(int rno, int marks)
+            {
+             
+             this.rno=rno;
+             this.marks=marks;
+            }
+        public void displayStudentdata()
+        {
+           
+            Console.WriteLine("rno=" + rno);
+            Console.WriteLine("marks=" + marks);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Student s=new Student();
+
+            s.getPersondata("mita","bombay");
+            s.getStudentdata(784,899);
+            s.displayStudentdata();
+            s.displayPersondata();
+        }
+    }
+}
