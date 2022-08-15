@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_a_single_level_derived_class_Student
+{
+    public class Person
+    {
+        public string name;
+        public string addr;
+    }
+    public class Student:Person
+    {
+        public int rno;
+        public int marks;
+    }
+    internal class inheritance
+    {
+        static void Main(string[] args)
+        {
+          Student s = new Student();
+            s.name = "neetu";
+            s.addr = "nagpur";
+            s.rno = 4;
+            s.marks = 89;
+
+            Console.WriteLine("name="+s.name);
+            Console.WriteLine("name=" + s.addr);
+            Console.WriteLine("name=" + s.rno);
+            Console.WriteLine("name=" + s.marks);
+
+        }
+    }
+}
