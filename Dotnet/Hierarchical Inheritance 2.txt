@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hierarchical_inheritance_2
+{
+    public class Person
+    {
+        string name;
+        string addr;
+
+        public void getPersondata(string name,string addr)
+        {
+            this.name = name;
+            this.addr = addr;
+        }
+        public void displayPersondata()
+        {
+            Console.WriteLine("name="+name);
+            Console.WriteLine("address="+addr);
+        }
+    }
+    public class Student:Person
+    {
+        int rolno;
+        int marks;
+        public void getStudentdata(int rolno,int marks)
+        {
+            this.rolno = rolno;
+            this.marks = marks;
+        }
+        public void displayStudentdata()
+        {
+            Console.WriteLine("rollno=" + rolno);
+            Console.WriteLine("marks=" + marks);
+        }
+
+    }
+    public class Employee : Person
+    {
+        int sal;
+        string desig;
+        public void getEmployeedata(int sal,string desig)
+        {
+            this.sal = sal;
+            this.desig = desig;
+        }
+        public void displayEmployeedata()
+        {
+            Console.WriteLine("salary=" + sal);
+            Console.WriteLine("designation=" + desig);
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating object of student class
+            Student s=new Student();
+            s.getPersondata("atif", "pune");
+            s.getStudentdata(12, 520);
+            s.displayPersondata();
+            s.displayStudentdata();
+            //creating object of employee class
+            Employee e=new Employee();
+            e.getPersondata("moni","banglore");
+            e.getEmployeedata(30000,"clerk");
+            e.displayPersondata();
+            e.displayEmployeedata();
+        }
+    }
+}
