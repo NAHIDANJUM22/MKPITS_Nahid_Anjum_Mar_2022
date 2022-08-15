@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p10_candidate_is_eligible_for_admission
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int math,phy,chem;
+            Console.WriteLine("enter the marks of maths");
+            math = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the marks of physics");
+            phy = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the marks of chemistry");
+            chem = Convert.ToInt32(Console.ReadLine());
+            
+            if(math>=65)
+            {
+                if (phy >= 55)
+                {
+                    if (chem >= 50)
+                    {
+                        if (math + phy + chem >= 180)
+                        {
+                            Console.WriteLine("candidate is eligible for admission");
+                        }
+                        else
+                        {
+                            Console.WriteLine("candidate is not eligible for admission");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("candidate is not eligible for admission");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("candidate is not eligible for admission");
+                }   
+            }
+            else
+            {
+                Console.WriteLine("candidate is not eligible for admission");
+            }
+        }
+    }
+}
