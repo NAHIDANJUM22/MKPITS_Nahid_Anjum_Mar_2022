@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Multilevel_Inheritance_another_example
+{
+    public class Person
+    {
+        string name;
+        string addr;
+
+        public void getPersondata(string name,string addr)
+        {
+            this.name = name;
+            this.addr = addr;
+        }
+        public void displayPersondata()
+        {
+            Console.WriteLine("name=" +name);
+            Console.WriteLine("address=" +addr);
+        }
+    }
+    public class Employee:Person
+    {
+        int sal;
+        string desig;
+        public void getEmployeedata(int sal,string designation)
+        {
+            this.sal = sal;
+            this.desig = designation;
+        }
+        public void displayEmployeedata()
+        {
+            Console.WriteLine("salary=" +sal);
+            Console.WriteLine("designation=" + desig);
+        }
+    }
+    public class ParttimeEmployee:Employee
+    {
+        int no_of_hours;
+        public void getParttimeEmployeedata(int no_of_hours)
+        {
+            this.no_of_hours=no_of_hours;
+        }
+        public void displayParttimeEmployeedata()
+        {
+            Console.WriteLine("no of hours="+no_of_hours );
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ParttimeEmployee p = new ParttimeEmployee();
+            p.getPersondata("nah","mumbai");
+            p.getEmployeedata(50000,"manager");
+            p.getParttimeEmployeedata(9);
+            p.displayPersondata();
+            p.displayEmployeedata();
+            p.displayParttimeEmployeedata();
+        }
+    }
+}
