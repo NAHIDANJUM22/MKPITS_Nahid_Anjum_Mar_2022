@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_a_Single_level_derived_class
+{
+
+    //creating a base class person
+    class Person
+    {
+       public string name;
+    }
+    //creating a derieved class student 
+    class Student:Person
+    {
+        public int rolno;
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.rolno = 1;
+            s.name = "mohini";
+            Console.WriteLine("roll no="+s.rolno);
+            Console.WriteLine("name=" + s.name);
+        }
+    }
+}
