@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Protected_access_Modifier
+{
+    public class Person
+    {
+        string name;
+        string addr;
+
+        //protected Method1
+        protected void getPersondata(string name,string addr)
+        {
+            this.name = name;   
+            this.addr = addr;
+        }
+        //protected Method
+        protected void displayPersondata()
+        {
+            Console.WriteLine("name="+name);
+            Console.WriteLine("address="+addr);
+        }
+    }
+    public class Student:Person
+    {
+        int rn;
+        int marks;
+
+        //method1
+        public void getStudentdata(int rn,int marks)
+        {
+            getPersondata("arifa", "nagpur"); //calling base class method from derived class
+            this.rn=rn;
+            this.marks=marks;
+
+        }
+    //method2
+        public void displayStudentdata()
+        {
+            displayPersondata(); //calling base class method from derived class
+            Console.WriteLine("rno=" + rn);
+            Console.WriteLine("marks=" + marks);
+
+        }
+
+    }
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+        Student s = new Student(); //creating object of derived class
+        s.getStudentdata(123,856);
+        s.displayStudentdata();
+        }
+    }
+}
