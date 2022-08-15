@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class_Book_with_method_overloading
+{
+    class Book
+    {
+        int bookid;
+        string title, author;
+        int price;
+
+        public void getdata()
+        {
+            bookid = 0;
+            title ="oracle";
+            author ="james";
+            price =200;
+        }
+         // method overloaded
+         public void getdata(int bookid)
+        {
+            this.bookid = bookid;
+        }
+        public void getdata(int bookid,string title)
+        {
+            this.bookid = bookid;
+            this.title = title;
+        }
+        public void getdata(int bookid,string title,string author)
+        {
+            this.bookid = bookid;
+            this.title=title;
+            this.author = author;
+        }
+        public void getdata(int bookid,string title,string author,int price)
+        {
+            this.bookid = bookid;
+            this.title=title;
+            this.author=author;
+            this.price = price;
+        }
+        public void display()
+        {
+            Console.WriteLine("book id = " + bookid);
+            Console.WriteLine("book title = " + title);
+            Console.WriteLine("book author= " + author);
+            Console.WriteLine("price = " + price);
+
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Book b = new Book();
+            b.getdata();
+            b.display();
+
+            Console.WriteLine("------------------------");
+
+            Console.WriteLine("Book 1 details");
+            Book b1 = new Book();
+            b1.getdata(121);
+            b1.display();
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Book 2 details");
+            Book b2 = new Book();
+            b2.getdata(121, "vb.net");
+            b2.display();
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Book 3 details");
+            Book b3 = new Book();
+            b3.getdata(121, "vb.net", "james");
+            b3.display();
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Book 4 details");
+            Book b4 = new Book();
+            b4.getdata(121, "vb.net", "james", 450);
+            b4.display();
+
+
+
+            Console.ReadLine();
+
+        }
+    }
+}
