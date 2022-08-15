@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class_and_Constructor1
+{
+    class Student
+        {
+         int rn;
+    string name;
+        
+public void getStudentdata()
+{
+    rn = 11;
+    name = "amitabh";
+}
+public void getstudentdata(int rn,string name)
+{
+    this.rn = rn;
+    this.name = name;
+}
+public void getstudentdata(string name,int rn)
+    {
+    this.name = name;
+    this.rn = rn;
+}
+public void displaydata()
+{
+    Console.WriteLine("rno " + rn);
+    Console.WriteLine("name " + name);
+}
+}
+internal class Program
+    {
+        static void Main(string[] args)
+        {
+        Student s = new Student(); //this will call constructor automatically
+        {
+             s.getStudentdata();
+             s.displaydata();
+            Console.WriteLine("calling method with parameters");
+            s.getstudentdata(125, "rahul");
+            s.displaydata();
+            Console.WriteLine("calling method with string first and then int");
+            s.getstudentdata("reena", 5896);
+            s.displaydata();
+                
+
+        }
+        }
+    }
+}
