@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace create_class_and_derived_class_and_inherits_method
+{
+    //base class
+    public class Person
+    {
+        string name;
+        string addr;
+
+        //method1
+        public void getPersondata(string name,string addr)
+        { 
+            this.name = name;
+            this.addr = addr;
+        }
+        //method2
+        public void displayPersondata()
+        {
+            Console.WriteLine("name=" + name);
+            Console.WriteLine("addr=" + addr);
+        }
+
+    }
+    //derived class
+    public class Student:Person
+    {
+        int rn;
+        int marks;
+        //method1
+        public void getStudentdata(int rn,int marks)
+        {
+            this.rn = rn;
+            this.marks = marks;
+        }
+        //method2
+        public void displayStudentdata()
+        {
+            Console.WriteLine("rollno="+rn);
+            Console.WriteLine("marks="+marks);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s=new Student();
+            s.getPersondata("maleek","nagpur");
+            s.getStudentdata(7854,800);
+            s.displayStudentdata();
+            s.displayPersondata();
+        }
+    }
+}
