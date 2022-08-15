@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hierarchical_inheritance
+{
+    class Person
+    {
+        public string name;
+        public string addr;
+    }
+    class Student : Person
+    {
+        public int rolno;
+        public int marks;
+    }
+    class Employee : Person
+    {
+        public int sal;
+        public string desig;
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //creating object of student class
+            Student s=new Student();
+            s.name = "arjit";
+            s.addr = "nagpur";
+            s.rolno = 42;
+            s.marks = 854;
+            Console.WriteLine("=====student details=====");
+            Console.WriteLine("name="+s.name);
+            Console.WriteLine("address=" + s.addr);
+            Console.WriteLine("rolno=" + s.rolno);
+            Console.WriteLine("marks=" + s.marks);
+            //creating object of employee class
+            Employee e=new Employee();
+            e.name = "ayan";
+            e.addr = "nagpur";
+            e.sal = 42000;
+            e.desig = "manager";
+            Console.WriteLine("name=" + e.name);
+            Console.WriteLine("address=" + e.addr);
+            Console.WriteLine("salary=" + e.sal);
+            Console.WriteLine("designation=" + e.desig);
+
+        }
+    }
+}
