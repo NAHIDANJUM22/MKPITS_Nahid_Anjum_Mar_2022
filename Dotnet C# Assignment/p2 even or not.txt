@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p2_even_or_odd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("enter a no");
+            n = Convert.ToInt32(Console.ReadLine());
+            
+            if (n%2==0)
+            {
+                Console.WriteLine(n + "is  an even no");
+            }
+            else
+            {
+                Console.WriteLine(n + "is  an odd no");
+            }
+        }
+    }
+}
