@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Create_a_single_level_derived_class_programmer
+{
+    //creating a base class employee
+    class Employee
+    {
+        protected int sal;
+    }
+    //creating a derieved class programmer
+    class Programmer : Employee
+    {
+        int bonus;
+
+        //creating a method
+        public void getdata(int sal, int bonus)
+        {
+            this.sal = sal;
+            this.bonus = bonus;
+        }
+        //creating a method
+        public void displaydata()
+        {
+            Console.WriteLine("salary="+sal);
+            Console.WriteLine("bonus=" + bonus);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Programmer p = new Programmer();
+            p.getdata(45000,5000);
+            p.displaydata();
+          
+        }
+    }
+}
