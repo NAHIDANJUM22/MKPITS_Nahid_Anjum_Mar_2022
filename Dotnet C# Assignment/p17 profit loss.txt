@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p17_profit_loss
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int cp,sp,amt;
+            Console.WriteLine("Enter a cost price");
+            cp = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a selling price");
+            sp = Convert.ToInt32(Console.ReadLine());
+            if (sp>cp)
+            {
+                amt = sp - cp;
+                Console.WriteLine("you can book your profit amount="+amt);
+            }
+            else
+            {
+                amt = cp-sp;
+                Console.WriteLine("you got loss of a amount="+amt);
+            }
+        }
+    }
+}
