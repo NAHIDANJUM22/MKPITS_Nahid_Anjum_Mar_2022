@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p13_temperature
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float temp;
+            Console.WriteLine("Enter the temperature in centigrade");
+            temp = Convert.ToSingle(Console.ReadLine());
+            if (temp < 0)
+            {
+                Console.WriteLine("weather is freezing");
+            }
+            else if (temp >= 0 && temp < 10)
+            {
+                Console.WriteLine("weather is very cold");
+            }
+            else if (temp >= 10 && temp < 20)
+            {
+                Console.WriteLine("weather is cold");
+            }
+            else if (temp >= 20 && temp < 30)
+            {
+                Console.WriteLine("weather is normal");
+            }
+            else if (temp >= 30 && temp < 40)
+            {
+                Console.WriteLine("weather is hot");
+            }
+            else
+            {
+                Console.WriteLine("weather is very hot");
+            }
+        }
+    }
+}
