@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p25_menu_driven_simple_calculation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, add, sub, mul, div,choice;
+            Console.WriteLine("press 1 for addition");
+            Console.WriteLine("press 2 for subtraction");
+            Console.WriteLine("press 3 for multilplication");
+            Console.WriteLine("press 4 for division");
+            Console.WriteLine("enter your choice");
+            choice=Convert.ToInt32(Console.ReadLine());
+            if(choice==1)
+            {
+                Console.WriteLine("enter value of a");
+                a=Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter value of b");
+                b = Convert.ToInt32(Console.ReadLine());
+                add = a + b;
+                Console.WriteLine("Addition="+add);
+            }
+            else if (choice == 2)
+            {
+                Console.WriteLine("enter value of a");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter value of b");
+                b = Convert.ToInt32(Console.ReadLine());
+                sub = a - b;
+                Console.WriteLine("Subtraction=" + sub);
+            }
+            else if (choice == 3)
+            {
+                Console.WriteLine("enter value of a");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter value of b");
+                b = Convert.ToInt32(Console.ReadLine());
+                mul = a * b;
+                Console.WriteLine("Multiplication=" + mul);
+            }
+            else if (choice == 4)
+            {
+                Console.WriteLine("enter value of a");
+                a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter value of b");
+                b = Convert.ToInt32(Console.ReadLine());
+                div = a / b;
+                Console.WriteLine("Division=" + div);
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+
+
+        }
+    }
+}
