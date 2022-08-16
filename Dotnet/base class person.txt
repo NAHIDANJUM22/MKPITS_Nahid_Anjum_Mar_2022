@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Base_class_Person
+{
+    public class Person
+    {
+        public string name = "roshni";
+    }
+    public class Student : Person
+    {
+        public string name = "himanshu";
+        public void display()
+        {
+            Console.WriteLine("name="+name);
+            Console.WriteLine("base class field name=" +base.name);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           Student s=new Student();
+            s.display();
+        }
+    }
+}
