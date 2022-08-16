@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p23_print_no_of_days_of_month
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, days;
+            Console.WriteLine("enter number");
+            num=Convert.ToInt32(Console.ReadLine());
+            if(num==1)
+            {
+                days = 31;
+                Console.WriteLine("month have days="+days);
+            }
+            else if(num==2)
+            {
+                days = 28;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 3)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 4)
+            {
+                days = 30;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 5)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 6)
+            {
+                days = 30;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 7)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 8)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 9)
+            {
+                days =30 ;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 10)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 11)
+            {
+                days = 30;
+                Console.WriteLine("month have days=" + days);
+            }
+            else if (num == 12)
+            {
+                days = 31;
+                Console.WriteLine("month have days=" + days);
+            }
+            else
+            {
+                Console.WriteLine("invalid");
+            }
+
+        }
+    }
+}
