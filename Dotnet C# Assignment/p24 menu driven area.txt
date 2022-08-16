@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p24_menu_driven_area
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int r, l, b, side,choice;
+            double area;
+            Console.WriteLine("press 1 for area of circle");
+            Console.WriteLine("press 2 for area of rectangle");
+            Console.WriteLine("press 3 for area of square");
+            Console.WriteLine("enter your choice");
+            choice = Convert.ToInt32(Console.ReadLine()); 
+            if(choice==1)
+            {
+                Console.WriteLine("enter radius of circle");
+                r= Convert.ToInt32(Console.ReadLine());
+                area = 3.14 * r * r;
+                Console.WriteLine("Area of Circle="+area);
+            }
+            else if (choice == 2)
+            {
+                Console.WriteLine("enter length of rectangle");
+                l= Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter breadth of rectangle");
+                b = Convert.ToInt32(Console.ReadLine());
+                area = l*b ;
+                Console.WriteLine("Area of Rectangle=" + area);
+            }
+            else if (choice == 3)
+            {
+                Console.WriteLine("enter side of square");
+                side = Convert.ToInt32(Console.ReadLine());
+                area = side * side ;
+                Console.WriteLine("Area of Square=" + area);
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+
+        }
+    }
+}
