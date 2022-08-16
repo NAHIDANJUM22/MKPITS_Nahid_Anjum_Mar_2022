@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment_Runtime_polymorphism
+{
+    class Account
+    {
+        public int acno;
+        public int balance = 1000;
+
+        public virtual string withdrawl(int acno,int amt)
+        {
+            return "withdrawl method of account class";
+        }
+        public string showbalance()
+        {
+            return "balance amount=" + balance;
+        }
+        
+    }
+    class Current:Account
+    {
+        public override string withdrawl(int acno, int amt)
+        {
+            this.acno = acno;
+            balance = balance - amt;
+            return "amount withdrawl successfully from current class";
+        }
+    }
+    class Saving:Account
+    {
+        public override string withdrawl(int acno, int amt)
+        {
+            this.acno = acno;
+            balance = balance - amt;
+            return "amount withdrawl successfully from saving class";
+        }
+            
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter account no");
+            int acno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be withdrawl");
+            int amt = Convert.ToInt32(Console.ReadLine());
+            Account a = null;
+            Console.WriteLine("enter account type current or saving");
+            string acttyp=Console.ReadLine();
+            if(acttyp=="Current")
+            {
+                a = new Current();
+            }
+            else if(acttyp=="Saving")
+            {
+                a=new Saving();
+            }
+            string res=a.withdrawl(acno, amt);
+            Console.WriteLine(res);
+            Console.WriteLine("enter account no="+acno);
+            res=a.showbalance();
+            Console.WriteLine(res);
+        }
+    }
+}
