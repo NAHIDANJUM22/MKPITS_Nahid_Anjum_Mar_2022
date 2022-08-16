@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P11_root_of_quadratic_equation
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            double x, y, p;
+            Console.WriteLine("enter value of a");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter value of b");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter value of c");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            p = (b * b) - 4 * a * c;
+           
+
+            p = Math.Sqrt(p);
+
+            if(p>0)
+            {
+                x = (-b + p) / 2 * a;
+                y = (-b - p) / 2 * a;
+                Console.WriteLine("roots are=" +x);
+                Console.WriteLine("roots are=" +y);
+            }
+            else
+            {
+                Console.WriteLine("roots are not possible");
+            }
+        }
+    }
+}
