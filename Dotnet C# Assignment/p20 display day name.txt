@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p20_display_day_name
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            string day;
+            Console.WriteLine("enter number");
+            num=Convert.ToInt32(Console.ReadLine());
+            if(num==1)
+            {
+                day = "Monday";
+            }
+            else if(num==2)
+            {
+                day = "Tuesday";
+            }
+            else if (num == 3)
+            {
+                day = "Wednesday";
+            }
+            else if (num == 4)
+            {
+                day = "Thursday";
+            }
+            else if (num == 5)
+            {
+                day = "Friday";
+            }
+            else if (num == 6)
+            {
+                day = "Saturday";
+            }
+            else if (num == 7)
+            {
+                day = "Sunday";
+            }
+            else
+            {
+                day = "Invalid";
+            }
+            Console.WriteLine(day);
+        }
+    }
+}
