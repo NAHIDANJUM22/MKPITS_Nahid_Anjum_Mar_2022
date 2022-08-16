@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Runtime_polymorphism_by_accepting_type_of_accout
+{
+    public class Account
+    {
+        public int acno;
+        public int balance = 10000;
+
+        public virtual string deposit(int acno,int amt)
+        {
+            return "deposit method of current class";
+        }
+        public string showbalance()
+        {
+            return "balance amount=" + balance;
+        }
+    }
+    public class Current : Account
+    {
+        public override string deposit(int acno, int amt)
+        {
+            this.acno = acno;
+            balance = balance + amt;
+            return "amount deposited successfully without interest in current class";
+        }
+    }
+    public class Saving:Account
+    {
+        public override string deposit(int acno, int amt)
+        {
+            this.acno=acno;
+            int interest = 1000;
+            balance=balance + amt+interest;
+            return "amount deposited successfully with interest in saving class";
+        }
+
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter account no");
+            int acno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be deposit");
+            int amt = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter account type saving or current");
+            string acttyp=Console.ReadLine();
+            Account a = null;
+            if(acttyp=="Saving")
+            {
+                a = new Saving();
+            }
+            else if(acttyp=="Current")
+            {
+                a=new Current();
+            }
+            string res=a.deposit(acno, amt);
+            Console.WriteLine(res);
+            Console.WriteLine("account no="+a.acno);
+            res = a.showbalance();
+            Console.WriteLine(res);
+        }
+    }
+}
