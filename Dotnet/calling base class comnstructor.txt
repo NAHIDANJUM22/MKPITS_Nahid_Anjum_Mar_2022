@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calling_Base_Class_Constructor
+{
+    class Person
+    {
+        string name="shami";
+        public Person()
+        {
+            Console.WriteLine("person class Constructor called");
+        }
+        public void display()
+        {
+            Console.WriteLine("base class field name="+name);
+        }
+    }
+    class Student : Person
+    {
+        string name = "roshni";
+        public Student()
+        {
+            Console.WriteLine("student class constuctor called");
+        }
+        public void display()
+        {
+            base.display();
+            Console.WriteLine("child class field name="+name);
+        }
+}
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.display();
+        }
+    }
+}
