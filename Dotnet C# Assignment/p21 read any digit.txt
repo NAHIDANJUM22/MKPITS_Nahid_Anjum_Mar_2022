@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p21_read_any_digit
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int digit;
+            string word;
+            Console.WriteLine("enter number");
+            digit = Convert.ToInt32(Console.ReadLine());
+            if (digit == 1)
+            {
+                word = "one";
+            }
+            else if (digit == 2)
+            {
+                word = "two";
+            }
+            else if (digit == 3)
+            {
+                word = "three";
+            }
+            else if (digit == 4)
+            {
+                word = "four";
+            }
+            else if (digit == 5)
+            {
+                word = "five";
+            }
+            else if (digit == 6)
+            {
+                word = "six";
+            }
+            else if (digit == 7)
+            {
+                word = "seven";
+            }
+            else if (digit == 8)
+            {
+                word = "eight";
+            }
+            else if (digit == 9)
+            {
+                word = "none";
+            }
+
+            else
+            {
+                word = "Invalid";
+            }
+            Console.WriteLine(word);
+        }
+    }
+}
