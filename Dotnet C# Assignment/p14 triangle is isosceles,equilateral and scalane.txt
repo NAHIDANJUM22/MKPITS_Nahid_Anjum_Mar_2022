@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p14_triangle_is_equilateral_isosceles_or_scalane
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int s1, s2, s3;
+            Console.WriteLine("enter 1st side of triangle ");
+            s1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter 2nd side of triangle ");
+            s2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter 3rd side of triangle ");
+            s3 = Convert.ToInt32(Console.ReadLine());
+            if(s1==s2 && s2==s3)
+            {
+                Console.WriteLine("This is an equilateral triangle");
+            }
+            if (s1 == s2 && s1 ==s3 && s2==s3)
+            {
+                Console.WriteLine("This is an isosceles triangle");
+            }
+            else  
+            {
+                Console.WriteLine("This is a scalene triangle");
+            }
+        }
+    }
+}
