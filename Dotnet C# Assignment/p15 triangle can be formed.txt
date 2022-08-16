@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p15_triangle_can_be_formed
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a1, a2, a3;
+            Console.WriteLine("enter angle 1 of triangle");
+            a1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter angle 2 of triangle");
+            a2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter angle 3 of triangle");
+            a3 = Convert.ToInt32(Console.ReadLine());
+            if(a1+a2+a3==180)
+            {
+                Console.WriteLine("Triangle is valid");
+            }
+            else
+            {
+                Console.WriteLine("Triangle is not valid");
+            }
+        }
+    }
+}
