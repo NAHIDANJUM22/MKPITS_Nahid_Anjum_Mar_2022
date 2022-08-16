@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Base_class_calling_by_method
+{
+     class Person
+    {
+        string name = "mkpits";
+        public void display()
+        {
+            Console.WriteLine("base class field name="+name);
+        }
+    }
+    class Student : Person
+    {
+        string name = "roshni";
+        public void display()
+        {
+            base.display();
+            Console.WriteLine("child class field name=" + name);
+            
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.display();
+        }
+    }
+}
