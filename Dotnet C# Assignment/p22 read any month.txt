@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p22_read_any_month
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            string month;
+            Console.WriteLine("enter number");
+            num = Convert.ToInt32(Console.ReadLine());
+            if (num == 1)
+            {
+                month = "january";
+            }
+            else if (num == 2)
+            {
+                month = "february";
+            }
+            else if (num == 3)
+            {
+                month = "march";
+            }
+            else if (num == 4)
+            {
+                month = "april";
+            }
+            else if (num == 5)
+            {
+                month = "may";
+            }
+            else if (num== 6)
+            {
+                month = "june";
+            }
+            else if (num == 7)
+            {
+                month = "july";
+            }
+            else if (num == 8)
+            {
+                month = "august";
+            }
+            else if (num == 9)
+            {
+                month = "september";
+            }
+            else if (num == 10)
+            {
+                month = "october";
+            }
+            else if (num == 11)
+            {
+                month = "november";
+            }
+            else if (num == 12)
+            {
+                month = "december";
+            }
+            else
+            {
+                month = "Invalid";
+            }
+            Console.WriteLine(month);
+        }
+    }
+}
