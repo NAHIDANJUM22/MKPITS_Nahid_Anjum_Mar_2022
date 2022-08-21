@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Interface_Shape
+{
+    interface Shape
+    {
+        void draw();
+    }
+    class Rectangle:Shape
+    {
+        public void draw()
+        {
+            Console.WriteLine("draw method of Rectangle class");
+        }
+    }
+    class Circle:Shape
+    {
+        public void draw()
+        {
+            Console.WriteLine("draw method of Circle class");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Shape s = new Rectangle();  
+            s.draw();
+            s = new Circle();
+            s.draw();
+        }
+    }
+}
