@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Access_Specifier_8
+{
+    class InternalTest
+    {
+        internal string name = "Santosh kumar";
+
+        internal void msg(string msg)
+        {
+            Console.WriteLine("hello" + msg);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            InternalTest internalTest = new InternalTest();
+            // Accessing internal variable  
+            Console.WriteLine("Hello " + internalTest.name);
+            // Accessing internal function  
+            internalTest.msg("Peter Decosta");
+
+        }
+    }
+}
