@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OutofMemory_Exception_Class
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "bobby";
+            string subject = "mathematics";
+            Console.WriteLine("name of length="+name.Length);
+            StringBuilder sb = new StringBuilder(name.Length,name.Length);
+            try
+            {
+                sb.Append(subject);
+            }
+            catch(Exception ee)
+            {
+                Console.WriteLine(ee.ToString());
+            }
+            Console.WriteLine("bye");
+        }
+    }
+}
