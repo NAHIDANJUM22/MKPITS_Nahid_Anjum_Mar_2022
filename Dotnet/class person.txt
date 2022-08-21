@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Class_Person
+{
+    class Person
+    {
+        void display()   //non static method
+        {
+            Console.WriteLine("hello");
+        }
+
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                Person p = new Person();  //instance of class
+                p.display();
+            }
+        }
+    }
+}
