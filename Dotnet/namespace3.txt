@@ -1,0 +1,35 @@
+using System;
+using first;
+using second;
+
+namespace first
+{
+    public class Hello
+    {
+        public void sayhello()
+        {
+            Console.WriteLine("hello namespace");
+        }
+    }
+}
+    namespace second
+    {
+        public class Welcome
+        {
+            public void saywelcome()
+            {
+                Console.WriteLine("welcome namespace");
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Hello h = new Hello();
+            Welcome w = new Welcome();
+            h.sayhello();
+            w.saywelcome(); 
+        }
+    }
+
