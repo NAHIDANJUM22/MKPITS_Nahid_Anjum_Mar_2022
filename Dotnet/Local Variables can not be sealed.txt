@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Local_Variables_cant_not_be_Sealed
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            sealed int x = 10;
+            x++;
+            Console.WriteLine(x);
+        }
+    }
+}
