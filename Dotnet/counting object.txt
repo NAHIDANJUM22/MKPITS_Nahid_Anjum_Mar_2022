@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Counting_object
+{
+    public class Account
+    {
+        public int acno;
+        public string name;
+        public static int count = 0;
+
+        public Account(int acno, string name)
+        {
+            this.acno = acno;
+            this.name = name;
+            count++;
+        }
+        public void display()
+        {
+            Console.WriteLine(acno+"  "+name+"  ");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Account a1 = new Account(125, "ravi");
+            Account a2 = new Account(1289, "akash");
+            Account a3 = new Account(125, "khushi");
+            a1.display();
+            a2.display();
+            a3.display();
+            Console.WriteLine("total object are"+Account.count);
+        }
+    }
+}
