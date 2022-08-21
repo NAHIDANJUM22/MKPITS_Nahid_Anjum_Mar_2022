@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace static_Class_Student
+{
+    class Student
+    {
+        public static void display()
+        {
+            Console.WriteLine("hello");
+        }
+        public void sayhi()
+        {
+            Console.WriteLine("hi");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student . display();
+            //Student.sayhi();   //error
+            Student s =new Student();   //creating  object of nonstatic display method
+            s.sayhi();                
+        }
+    }
+}
