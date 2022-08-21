@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Interface_3
+{
+    interface Bank
+    {
+        string deposit(int acno, int amt);
+        string withdrawl(int acno,int amt); 
+    }
+    class Account
+
+    {
+        public int acno;
+        public int bal=1000;
+        public string showbalance()
+        {
+            return "balance is" + bal;
+        }
+    }
+    class Saving :Account, Bank
+    {
+        public string deposit (int acno,int amt)
+        {
+            this.acno = acno;
+            bal = bal + amt;
+
+            return "deposited successfully balance is" + bal;
+        }
+        public string withdrawl(int acno,int amt)
+        {
+            this.acno = acno;
+            bal = bal - amt;
+            return " withdrawl successfully balance is " + bal;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Saving b=new Saving();
+            string str = b.deposit(45,5000);
+            Console.WriteLine(str);
+            str = b.withdrawl(12, 2000);
+            Console.WriteLine(str);
+            Console.WriteLine(b.showbalance());
+        }
+    }
+}
