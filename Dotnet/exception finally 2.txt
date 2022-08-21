@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exception_finally_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            int n;
+            int res = 0;
+            Console.WriteLine("Enter number 1");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter number 2");
+             n = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                res = num / n;  //error will come here and program terminates
+
+            }
+            catch(Exception ee)
+            {
+                Console.WriteLine("catch block is executing");
+                Console.WriteLine("can not devide by zero");
+            }
+            finally
+            {
+                Console.WriteLine("finally block is executing");
+                Console.WriteLine("res="+res);
+            }
+            Console.WriteLine("bye");
+        }
+    }
+}
