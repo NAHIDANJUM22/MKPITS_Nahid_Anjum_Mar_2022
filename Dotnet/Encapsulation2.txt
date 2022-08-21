@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AccessSpecifiers
+{
+    class Student
+    {
+        // Creating setter and getter for each property  
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+    }
+}  
+
+    namespace AccessSpecifiers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          Student s=new Student();
+            //setting value s to the properties
+            s.ID = "1256";
+            s.Name = "babita";
+            s.Email = "malika@example.com";
+            Console.WriteLine("id="+s.ID);
+            Console.WriteLine("name="+s.Name);
+            Console.WriteLine("email="+s.Email);
+        }
+    }
+}
