@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstract_class_person_sealed_class_parttimestudent
+{
+    abstract class person
+    {
+        public string name;
+    }
+    class student:person
+    {
+        public int rno;
+    }
+    sealed class parttimestudent : student
+    {
+        public int hrs;
+    }
+        //class newstudent:parttimestudent we can't create sealed class's derived class
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           // person p = new person();   we can't create object of abstract class
+           parttimestudent p=new parttimestudent();
+            p.rno = 23;
+            p.name = "manish";
+            p.hrs = 7;
+            Console.WriteLine("roll no="+p.rno);
+            Console.WriteLine("name="+p.name);
+            Console.WriteLine("hours"+p.hrs);
+        }
+    }
+}
