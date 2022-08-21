@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Static_Field
+{
+    public class Account
+    {
+        public int acno;
+        public string name;
+        public static float rateofinterest=8.8f;
+            public Account(int acno,string name) //constructor
+        {
+            this.acno = acno;
+            this.name = name;
+        }
+        public void display()   //method
+        {
+            Console.WriteLine(acno+"  "+name+"  " +rateofinterest);
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Account a1 = new Account(458, "minakshi");   //object
+            Account a2 = new Account(45788, "minal");    //object
+            a1.display();
+            a2.display();
+        }
+    }
+}
