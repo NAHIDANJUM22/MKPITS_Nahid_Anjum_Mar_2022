@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sealed_class_Student
+{
+    sealed class Student
+    {
+        public string name;
+    }
+    class Parttime : Student  //error will come
+    {
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
