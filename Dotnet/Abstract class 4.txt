@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstract_class_Person
+{
+    abstract class Person
+    {
+        public abstract void display(); //abstract class
+
+        public void showdata() // non abstract claas
+        {
+            Console.WriteLine("hello from showdata");
+        }
+    }
+    class Student : Person
+    {
+        //implementation of abstract method display in derieved class
+        public override void display()
+        {
+            Console.WriteLine("hello from display method");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //person p = new person(); error since person is abstract class
+            Student s =new Student();
+            s.display();
+            s.showdata();
+        }
+    }
+}

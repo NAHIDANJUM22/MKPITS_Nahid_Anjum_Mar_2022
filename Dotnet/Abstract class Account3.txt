@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstract_class_account_3
+{
+    abstract class Account
+    {
+        public int acno;
+        public int bal = 1000;
+        public abstract void deposit(int amt);  //abstract class
+        public void showbalance()  //non abstract class
+        {
+            Console.WriteLine("balance amount for account no {0} is {1}",acno,bal);
+        }
+    }
+    class Current : Account
+    {
+        public override void deposit(int amt)
+        {
+            bal = bal + amt;
+        }
+    }
+    class Saving : Account
+    {
+        public override void deposit(int amt)
+        {
+            int interest = 100;
+            bal= bal + amt+interest;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter account no");
+            int acno=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter amount to be deposited");
+            int amt = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter account type saving or current");
+            string acttype = Console.ReadLine();
+            Account a = null;
+            if(acttype=="Saving")
+            {
+                a = new Saving();
+            }
+            else if(acttype=="Current")
+            {
+                a=new Current();
+            }
+            a.acno = acno;
+            a.deposit(amt);
+            a.showbalance();
+        }
+    }
+}
