@@ -1,0 +1,6 @@
+create table rubber1(id int,name varchar(30),sal money,age int)
+insert rubber1 values(25,'neha',12000,26)
+insert rubber1 values(55,'reha',15000,28)
+insert rubber1 values(45,'jeha',17000,29)
+insert rubber1 values(65,'geha',19000,32)
+select id,sal,name from rubber1 where id=(select max(id) from rubber1)

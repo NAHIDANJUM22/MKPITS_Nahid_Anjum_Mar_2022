@@ -1,0 +1,6 @@
+create table rubber2(id int,name varchar(30),sal money,age int)
+insert rubber2 values(25,'neha',12000,26)
+insert rubber2 values(55,'reha',15000,28)
+insert rubber2 values(45,'jeha',17000,29)
+insert rubber2 values(65,'geha',19000,32)
+select id,sal,name from rubber2 where sal=(select min(sal) from rubber2)
